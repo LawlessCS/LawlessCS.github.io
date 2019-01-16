@@ -1,6 +1,8 @@
 let time = 0;
 let wave = [];
 
+let lastVal = 1;
+
 function setup() {
   let canvas = createCanvas(1000, 400);
   canvas.parent('canvas');
@@ -13,9 +15,25 @@ function draw() {
   let x = 0;
   let y = 0;
 
-  document.getElementById("countLabel").innerText = "Number of circles: " + document.getElementById("count").value;
+  let circleCount = 1;
+  console.log(lastVal);
 
-  for (let i = 0; i < document.getElementById("count").value; i++) {
+  if(lastVal != document.getElementById("count").value)
+    document.getElementById("countOverride").value = "";
+
+  if (document.getElementById("countOverride").value == "")
+  {
+    circleCount = document.getElementById("count").value;
+    lastVal = circleCount;
+  }
+  else
+    circleCount = document.getElementById("countOverride").value;
+
+
+
+  document.getElementById("countLabel").innerText = "Number of circles: " + circleCount;
+
+  for (let i = 0; i < circleCount; i++) {
     let prevx = x;
     let prevy = y;
 
