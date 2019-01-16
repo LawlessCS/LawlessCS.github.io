@@ -2,8 +2,8 @@ let time = 0;
 let wave = [];
 
 function setup() {
-  createCanvas(1000, 400);
-  slider = createSlider(1, 1000, 1);
+  let canvas = createCanvas(1000, 400);
+  canvas.parent('canvas');
 }
 
 function draw() {
@@ -13,7 +13,9 @@ function draw() {
   let x = 0;
   let y = 0;
 
-  for (let i = 0; i < slider.value(); i++) {
+  document.getElementById("countLabel").innerText = "Number of circles: " + document.getElementById("count").value;
+
+  for (let i = 0; i < document.getElementById("count").value; i++) {
     let prevx = x;
     let prevy = y;
 
@@ -33,7 +35,7 @@ function draw() {
   }
   wave.unshift(y);
   line(x, y, 300, wave[0]);
-  
+
   beginShape();
   noFill();
   for (let i = 0; i < wave.length; i++) {
