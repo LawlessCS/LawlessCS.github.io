@@ -34,6 +34,7 @@ class Ship {
         this.circlingPlanet = false;
         this.planet = [];
         this.counter = 0;
+        this.clockwise = true;
     }
 
     draw() {
@@ -45,7 +46,7 @@ class Ship {
         if (this.circlingPlanet) {
             this.x = this.planet.x + (this.planet.gravR * -Math.sin(this.counter));
             this.y = this.planet.y + (this.planet.gravR * Math.cos(this.counter));
-            this.counter += 0.1;
+            this.counter += (this.clockwise) ? 0.1 : -0.1;
         }
         else {
             this.x += this.dx;
@@ -57,6 +58,11 @@ class Ship {
         this.circlingPlanet = true;
         this.planet = planet;
 
+        this.setOrbitLocation(planet);
+        this.setOrbitDirection(planet);
+    }
+
+    setOrbitLocation(planet) {
         if (this.x >= planet.x && this.y >= planet.y) {
             console.log("bottom right");
             this.counter = (2 * Math.PI) - Math.atan((this.x - planet.x) / (this.y - planet.y));
@@ -78,9 +84,23 @@ class Ship {
         }
     }
 
+    setOrbitDirection(planet) {
+        if (Math.abs(this.dx) >= Math.abs(this.dy)) {
+            this.clockwise = (this.y <= planet.y);
+        }
+        else {
+
+            this.clockwise = (this.x >= planet.x);
+        }
+    }
+
     launch() {
         this.circlingPlanet = false;
-        this.dx = this.speed * Math.sin(this.counter) - (this.speed * Math.sin((this.counter + 0.1)));
         this.dy = this.speed * -Math.cos(this.counter) - (this.speed * -Math.cos((this.counter + 0.1)));
+        this.dx = this.speed * Math.sin(this.counter) - (this.speed * Math.sin((this.counter + 0.1)));
+        if (!this.clockwise) {
+            this.dx *= -1;
+            this.dy *= -1;
+        }
     }
 }
