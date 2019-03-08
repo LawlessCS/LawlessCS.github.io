@@ -47,7 +47,7 @@ function step() {
             }
         }
         circle.grow();
-        circle.draw(circle.x % 2 + circle.x % 3 != 0);
+        circle.draw(circle.x % 2 == 0);
     });
     if (running)
         requestAnimationFrame(step);
