@@ -39,7 +39,6 @@ function canvasClicked(evt) {
     planets.forEach(planet => {
         if (Math.hypot(planet.x - evt.offsetX, planet.y - evt.offsetY) < planet.r) {
             ship.circlePlanet(planet);
-            console.log("planet clicked");
             return null;
         }
     });

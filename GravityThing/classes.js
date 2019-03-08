@@ -30,9 +30,10 @@ class Ship {
         this.dx = 0;
         this.dy = 0;
         this.size = 25;
-        this.speed = 75;
+        this.speed = 50;
         this.circlingPlanet = false;
         this.planet = [];
+        this.counter = 0;
     }
 
     draw() {
@@ -42,8 +43,9 @@ class Ship {
 
     move() {
         if (this.circlingPlanet) {
-            this.x = this.planet.x + (this.planet.gravR * -Math.sin(frameCount / 10));
-            this.y = this.planet.y + (this.planet.gravR * Math.cos(frameCount / 10));
+            this.x = this.planet.x + (this.planet.gravR * -Math.sin(this.counter));
+            this.y = this.planet.y + (this.planet.gravR * Math.cos(this.counter));
+            this.counter += 0.1;
         }
         else {
             this.x += this.dx;
@@ -54,13 +56,31 @@ class Ship {
     circlePlanet(planet) {
         this.circlingPlanet = true;
         this.planet = planet;
+
+        if (this.x >= planet.x && this.y >= planet.y) {
+            console.log("bottom right");
+            this.counter = (2 * Math.PI) - Math.atan((this.x - planet.x) / (this.y - planet.y));
+        }
+        else if (this.x <= planet.x && this.y >= planet.y) {
+            console.log("bottom left");
+            this.counter = (2 * Math.PI) + Math.atan((planet.x - this.x) / (this.y - planet.y));
+        }
+        else if (this.x <= planet.x && this.y <= planet.y) {
+            console.log("top left");
+            this.counter = Math.PI - Math.atan((planet.x - this.x) / (planet.y - this.y));
+        }
+        else if (this.x >= planet.x && this.y <= planet.y) {
+            console.log("top right");
+            this.counter = Math.PI + Math.atan((this.x - planet.x) / (planet.y - this.y));
+        }
+        else {
+            console.log("unknown case");
+        }
     }
 
     launch() {
-        console.log("hi");
         this.circlingPlanet = false;
-        console.log(this.circlingPlanet);
-        this.dx = this.speed * Math.sin(frameCount / 10) - (this.speed * Math.sin((frameCount + 1) / 10));
-        this.dy = this.speed * -Math.cos(frameCount / 10) - (this.speed * -Math.cos((frameCount + 1) / 10));
+        this.dx = this.speed * Math.sin(this.counter) - (this.speed * Math.sin((this.counter + 0.1)));
+        this.dy = this.speed * -Math.cos(this.counter) - (this.speed * -Math.cos((this.counter + 0.1)));
     }
 }
