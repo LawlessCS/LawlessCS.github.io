@@ -85,12 +85,17 @@ class Ship {
     }
 
     setOrbitDirection(planet) {
-        if (Math.abs(this.dx) >= Math.abs(this.dy)) {
-            this.clockwise = (this.y <= planet.y);
+        if (Math.abs(this.dy) > Math.abs(this.dx)) {
+            if (this.y < planet.y)
+                this.clockwise = (this.x > planet.x);
+            else
+                this.clockwise = (this.x < planet.x);
         }
         else {
-
-            this.clockwise = (this.x >= planet.x);
+            if (this.y > planet.y)
+                this.clockwise = (this.x > planet.x);
+            else
+                this.clockwise = (this.x < planet.x);
         }
     }
 

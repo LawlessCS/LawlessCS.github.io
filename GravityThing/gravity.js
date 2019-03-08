@@ -56,9 +56,15 @@ function clearCanvas() {
 }
 
 function generatePlanets(numPlanets) {
-    planets.push(new Planet(300, 150, 25));
-    planets.push(new Planet(600, 400, 25));
-    planets.push(new Planet(850, 225, 25));
+    //planets.push(new Planet(300, 150, 25));
+    //planets.push(new Planet(600, 400, 25));
+    //planets.push(new Planet(850, 225, 25));
+	
+	for(let i = 0; i < 5; i++) {
+		let x = Math.floor(Math.random() * canvas.width);
+		let y = Math.floor(Math.random() * canvas.height);
+		planets.push(new Planet(x, y, 25));
+	}
 }
 
 function drawPlanets() {
