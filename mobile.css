@@ -12,6 +12,7 @@ body {
 }
 
 #container div {
+    padding: 8px 0;
     height: auto;
     margin: 5px 0;
     width: 100%;
