@@ -25,19 +25,25 @@ h1 {
 }
 
 #container {
-    display:flex;
+    width: 80%;
+    margin: auto;
     background: #DDD;
-    justify-content: space-around;    
+    display: flex;
+    flex-wrap: wrap;
 }
-#container a {
-    flex-basis: 30%;
+
+#container > a {
+    margin: 5px;
+    justify-content: space-around;
+    flex-grow: 1;
+    width: 25%;
 }
 
 #container div {    
     border-radius: 10px;
     height: 100px;
     margin: 10px 0;
-    background: #D44;
+    background: #575757;
     padding: 10px;
 }
 
