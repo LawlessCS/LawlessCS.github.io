@@ -1,0 +1,3 @@
+[submodule "Coding-Challenges"]
+	path = Coding-Challenges
+	url = https://github.com/LawlessCS/Coding-Challenges.git
