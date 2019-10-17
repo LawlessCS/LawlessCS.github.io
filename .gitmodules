@@ -4,6 +4,3 @@
 [submodule "Doodle-Classifier"]
 	path = Doodle-Classifier
 	url = https://github.com/LawlessCS/Doodle-Classifier.git
-[submodule "Neuro-Flap"]
-	path = Neuro-Flap
-	url = https://github.com/LawlessCS/Neuro-Flap.git
