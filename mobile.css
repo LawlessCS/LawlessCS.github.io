@@ -14,8 +14,9 @@ body {
 #container div {
     padding: 8px 0;
     height: auto;
-    margin: 5px 0;
-    width: 100%;
+margin: auto;
+margin-top: 8px;
+    width: 75%;
 }
 
 #container > a h2 {
