@@ -7,7 +7,7 @@ html {
 }
 
 body {
-    width: 60%;
+    width: 70%;
     margin: auto;
     border-radius: 15px;    
     padding: 10px;
@@ -42,7 +42,7 @@ h1 {
 
 #container div {    
     border-radius: 10px;
-    height: 100px;
+    height: 125px;
     margin: 10px 0;
     background: #575757;
     padding: 10px;
