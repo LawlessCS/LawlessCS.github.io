@@ -7,3 +7,6 @@
 [submodule "Neuro-Flap"]
 	path = Neuro-Flap
 	url = https://github.com/LawlessCS/Neuro-Flap.git
+[submodule "SnakeTF"]
+	path = SnakeTF
+	url = https://github.com/LawlessCS/SnakeTF.git
