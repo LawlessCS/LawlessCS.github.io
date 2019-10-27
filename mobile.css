@@ -2,6 +2,11 @@ body {
     width: 60%;
 }
 
+#container {
+    margin: 5px;
+    width: 100%;
+}
+
 #container > a {
     width: 100%;
     margin: 0;
@@ -16,7 +21,7 @@ body {
     height: auto;
 margin: auto;
 margin-top: 8px;
-    width: 75%;
+    width: 100%;
 }
 
 #container > a h2 {
