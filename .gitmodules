@@ -10,3 +10,6 @@
 [submodule "SnakeTF"]
 	path = SnakeTF
 	url = https://github.com/LawlessCS/SnakeTF.git
+[submodule "TeachableMachines"]
+	path = TeachableMachines
+	url = https://github.com/LawlessCS/TeachableMachines.git
