@@ -8,13 +8,15 @@ function setup() {
     createCanvas(640, 480);
     video = createCapture(VIDEO);
     video.hide();
-    
+
     poseNet = ml5.poseNet(video, modelLoaded);
     poseNet.on("pose", gotPoses);
 }
 
 function draw() {
-    image(video, 0, 0);
+    translate(video.width, 0);
+    scale(-1, 1);
+    image(video, 0, 0, video.width, video.height);
 
     if (pose) {
         fill(255, 0, 0);
@@ -26,13 +28,11 @@ function draw() {
         let d = dist(eyeR.x, eyeR.y, eyeL.x, eyeL.y);
 
         for (let keyPoint of pose.keypoints) {
-            if (keyPoint.part != "leftEar" && keyPoint.part != "rightEar") {
-                let x = keyPoint.position.x;
-                let y = keyPoint.position.y;
+            let x = keyPoint.position.x;
+            let y = keyPoint.position.y;
 
-                if (keyPoint.score > 0.25) {
-                    ellipse(x, y, d / 7.5);
-                }
+            if (keyPoint.score > 0.25) {
+                ellipse(x, y, d / 7.5);
             }
         }
 
