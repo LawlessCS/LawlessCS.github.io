@@ -17,19 +17,20 @@ function setup() {
 }
 
 function draw() {
+    push();
     translate(video.width, 0);
     scale(-1, 1);
     image(video, 0, 0);
+    pop();
 
     if (pose) {
         fill(255, 0, 0);
         strokeWeight(1);
 
         let eyeR = pose.rightEye;
-        let eyeL = pose.leftEye;
 
         sansEye.resize(50, 0);
-        image(sansEye, eyeL.x-15, eyeL.y-15);
+        image(sansEye, video.width / 2 - (eyeR.x - video.width / 2) - 12, eyeR.y-12);
     }
 }
 
