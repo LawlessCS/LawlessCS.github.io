@@ -1,171 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="./style.css" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="./style.css">
+        <link
+            rel="stylesheet"
+            media="only screen and (max-width: 1600px)"
+            href="./mobile.css"
+        />
 
-    <link rel="stylesheet" media="only screen and (max-width: 1600px)" href="./mobile.css" />
-    
-    <title>Charlie's Mini Projects</title>
-</head>
+        <title>Charlie's Mini Projects</title>
+    </head>
 
-<body>
-    <header>
-        <h1>Charles Batten</h1>
-    </header>
-    <div id="container">
-	<a href="./Neuro-Flap/index.html">
-            <div id="item">
-                <h2>Flappy Bird with Tensorflow</h2>
-            </div>
-        </a>	
-        <a href="./TicTacToeMinimax/index.html">
-            <div id="item">
-                <h2>TicTacToe with Minimax</h2>
-            </div>
-        </a>
-	<a href="./SnakeTF/index.html">
-            <div id="item">
-                <h2>Snake with Tensorflow</h2>
-            </div>
-        </a>	
-	<a href="./Coding-Challenges/106_XOR-Problem-with-TensorflowJS/index.html">
-            <div id="item">
-                <h2>XOR Problem with Tensorflow</h2>
-            </div>
-        </a>
-	<a href="./Coding-Challenges/105_Polynomial-Regression-with-TensorflowJS/index.html">
-            <div id="item">
-                <h2>Polynomial Regression with Tensorflow</h2>
-            </div>
-        </a>
-	<a href="./Coding-Challenges/104_Linear-Regression-with-TensorflowJS/index.html">
-            <div id="item">
-                <h2>Linear Regression with Tensorflow</h2>
-            </div>
-        </a>
-        <a href="./Doodle-Classifier/DoodleClassifier/index.html">
-            <div id="item">
-                <h2>Doodle Classifier</h2>
-            </div>
-        </a>
-		<a href="./Coding-Challenges/CC_003_Hilbert-Curve/index.html">
-            <div id="item">
-                <h2>Hilbert Curve Visualiser</h2>
-            </div>
-        </a>
-		<a href="./Pose-Estimator/index.html">
-            <div id="item">
-                <h2>PoseNet Pose Estimator</h2>
-            </div>
-        </a>
-		<a href="./TeachableMachines/index.html">
-            <div id="item">
-                <h2>Teachable Machines</h2>
-            </div>
-        </a>		
-        <a href="./Coding-Challenges/062_PlinkoMatterJS/index.html">
-            <div id="item">
-                <h2>Plinko with Matter.js</h2>
-            </div>
-        </a>
-        <a href="./Fourier/Fourier/index.html">
-            <div id="item">
-                <h2>Fourier Series Visualiser</h2>
-            </div>
-        </a>
-        <a href="./Coding-Challenges/012_Lorenz-Attractor/index.html">
-            <div id="item">
-                <h2>Lorenz Attractor</h2>
-            </div>
-        </a>
-        <a href="./Coding-Challenges/CC_002_Collatz-Conjecture/index.html">
-            <div id="item">
-                <h2>Collatz Conjecture Visualiser</h2>
-            </div>
-        </a>
-        <a href="./CPacking/index.html">
-            <div id="item">
-                <h2>Circle Packing</h2>
-            </div>
-        </a>
-        <a href="./Coding-Challenges/086_Cubes/index.html">
-            <div id="item">
-                <h2>Cube Animation</h2>
-            </div>
-        </a>
-        <a href="./Coding-Challenges/059_Steering-Behaviours/index.html">
-            <div id="item">
-                <h2>Steering Behaviour</h2>
-            </div>
-        </a>
-		<a href="./Coding-Challenges/001_Starfield/index.html">
-            <div id="item">
-                <h2>Starfield</h2>
-            </div>
-        </a>
-		<a href="./Coding-Challenges/002_Menger-Sponge/index.html">
-            <div id="item">
-                <h2>Menger Sponge</h2>
-            </div>
-        </a>
-		<a href="./Coding-Challenges/014_Fractal-Trees-Recursive/index.html">
-            <div id="item">
-                <h2>Fractal Trees</h2>
-            </div>
-        </a>
-		<a href="./Coding-Challenges/029_Smart_Rockets/index.html">
-            <div id="item">
-                <h2>Smart Rockets</h2>
-            </div>
-        </a>
-		<a href="./Coding-Challenges/011_Terrain-Generation-Perlin-Noise/index.html">
-            <div id="item">
-                <h2>Perlin Noise Terrain</h2>
-            </div>
-        </a>
-        <a href="./Coding-Challenges/055_Mathematical-Rose-Patterns/index.html">
-            <div id="item">
-                <h2>Mathmatical Rose Patterns</h2>
-            </div>
-        </a>
-        <a href="./Coding-Challenges/CC_001_Maurer-Rose/index.html">
-            <div id="item">
-                <h2>Maurer Rose Visualiser</h2>
-            </div>
-        </a>
-        <a href="./Coding-Challenges/151_Ukulele-Tuner/index.html">
-            <div id="item">
-                <h2>Pitch Detection</h2>
-            </div>
-        </a>
-        <a href="./Coding-Challenges/149_TicTacToe/index.html">
-            <div id="item">
-                <h2>Tic Tac Toe</h2>
-            </div>
-        </a>
-        <a href="./Coding-Challenges/114_Bubble-Sort-Visualisation/index.html">
-            <div id="item">
-                <h2>Bubble Sort Visualisation</h2>
-            </div>
-        </a>
-        <a href="./Coding-Challenges/095_Approximating-the-Value-of-Pi/index.html">
-            <div id="item">
-                <h2>Approxmiating Pi</h2>
-            </div>
-        </a>
-        <a href="./GravityThing/index.html">
-            <div id="item">
-                <h2>Gravity Thing</h2>
-            </div>
-        </a>
-    </div>
-    <footer>
-        <h4>Copyright &copy; Charles Batten 2019</h4>
-    </footer>
-</body>
+    <body>
+        <header>
+            <h1>Charles Batten</h1>
+        </header>
+        <div id="container">
+            <a href="./Neuro-Flap/index.html">
+                <div id="item">
+                    <h2>Flappy Bird with Tensorflow</h2>
+                </div>
+            </a>
+            <a href="./TicTacToeMinimax/index.html">
+                <div id="item">
+                    <h2>TicTacToe with Minimax</h2>
+                </div>
+            </a>
+            <a href="./SnakeTF/index.html">
+                <div id="item">
+                    <h2>Snake with Tensorflow</h2>
+                </div>
+            </a>
+            <a href="./Coding-Challenges/106_XOR-Problem-with-TensorflowJS/index.html">
+                <div id="item">
+                    <h2>XOR Problem with Tensorflow</h2>
+                </div>
+            </a>
+            <a
+                href="./Coding-Challenges/105_Polynomial-Regression-with-TensorflowJS/index.html"
+            >
+                <div id="item">
+                    <h2>Polynomial Regression with Tensorflow</h2>
+                </div>
+            </a>
+            <a href="./Coding-Challenges/104_Linear-Regression-with-TensorflowJS/index.html">
+                <div id="item">
+                    <h2>Linear Regression with Tensorflow</h2>
+                </div>
+            </a>
+            <a href="./Doodle-Classifier/DoodleClassifier/index.html">
+                <div id="item">
+                    <h2>Doodle Classifier</h2>
+                </div>
+            </a>
+            <a href="./Coding-Challenges/CC_003_Hilbert-Curve/index.html">
+                <div id="item">
+                    <h2>Hilbert Curve Visualiser</h2>
+                </div>
+            </a>
+            <a href="./Pose-Estimator/index.html">
+                <div id="item">
+                    <h2>PoseNet Pose Estimator</h2>
+                </div>
+            </a>
+            <a href="./Coding-Challenges/CC_004_Worley-Noise/index.html">
+                <div id="item">
+                    <h2>Worley Noise Generator</h2>
+                </div>
+            </a>
+            <a href="./TeachableMachines/index.html">
+                <div id="item">
+                    <h2>Teachable Machines</h2>
+                </div>
+            </a>
+            <a href="./Coding-Challenges/062_PlinkoMatterJS/index.html">
+                <div id="item">
+                    <h2>Plinko with Matter.js</h2>
+                </div>
+            </a>
+            <a href="./Fourier/Fourier/index.html">
+                <div id="item">
+                    <h2>Fourier Series Visualiser</h2>
+                </div>
+            </a>
+            <a href="./Coding-Challenges/012_Lorenz-Attractor/index.html">
+                <div id="item">
+                    <h2>Lorenz Attractor</h2>
+                </div>
+            </a>
+            <a href="./Coding-Challenges/CC_002_Collatz-Conjecture/index.html">
+                <div id="item">
+                    <h2>Collatz Conjecture Visualiser</h2>
+                </div>
+            </a>
+            <a href="./CPacking/index.html">
+                <div id="item">
+                    <h2>Circle Packing</h2>
+                </div>
+            </a>
+            <a href="./Coding-Challenges/086_Cubes/index.html">
+                <div id="item">
+                    <h2>Cube Animation</h2>
+                </div>
+            </a>
+            <a href="./Coding-Challenges/059_Steering-Behaviours/index.html">
+                <div id="item">
+                    <h2>Steering Behaviour</h2>
+                </div>
+            </a>
+            <a href="./Coding-Challenges/001_Starfield/index.html">
+                <div id="item">
+                    <h2>Starfield</h2>
+                </div>
+            </a>
+            <a href="./Coding-Challenges/002_Menger-Sponge/index.html">
+                <div id="item">
+                    <h2>Menger Sponge</h2>
+                </div>
+            </a>
+            <a href="./Coding-Challenges/014_Fractal-Trees-Recursive/index.html">
+                <div id="item">
+                    <h2>Fractal Trees</h2>
+                </div>
+            </a>
+            <a href="./Coding-Challenges/029_Smart_Rockets/index.html">
+                <div id="item">
+                    <h2>Smart Rockets</h2>
+                </div>
+            </a>
+            <a href="./Coding-Challenges/011_Terrain-Generation-Perlin-Noise/index.html">
+                <div id="item">
+                    <h2>Perlin Noise Terrain</h2>
+                </div>
+            </a>
+            <a href="./Coding-Challenges/055_Mathematical-Rose-Patterns/index.html">
+                <div id="item">
+                    <h2>Mathmatical Rose Patterns</h2>
+                </div>
+            </a>
+            <a href="./Coding-Challenges/CC_001_Maurer-Rose/index.html">
+                <div id="item">
+                    <h2>Maurer Rose Visualiser</h2>
+                </div>
+            </a>
+            <a href="./Coding-Challenges/151_Ukulele-Tuner/index.html">
+                <div id="item">
+                    <h2>Pitch Detection</h2>
+                </div>
+            </a>
+            <a href="./Coding-Challenges/149_TicTacToe/index.html">
+                <div id="item">
+                    <h2>Tic Tac Toe</h2>
+                </div>
+            </a>
+            <a href="./Coding-Challenges/114_Bubble-Sort-Visualisation/index.html">
+                <div id="item">
+                    <h2>Bubble Sort Visualisation</h2>
+                </div>
+            </a>
+            <a href="./Coding-Challenges/095_Approximating-the-Value-of-Pi/index.html">
+                <div id="item">
+                    <h2>Approxmiating Pi</h2>
+                </div>
+            </a>
+            <a href="./GravityThing/index.html">
+                <div id="item">
+                    <h2>Gravity Thing</h2>
+                </div>
+            </a>
+        </div>
+        <footer>
+            <h4>Copyright &copy; Charles Batten 2019</h4>
+        </footer>
+    </body>
 </html>
