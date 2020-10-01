@@ -13,6 +13,3 @@
 [submodule "TeachableMachines"]
 	path = TeachableMachines
 	url = https://github.com/LawlessCS/TeachableMachines.git
-[submodule "Pendulearn"]
-	path = Pendulearn
-	url = https://github.com/LawlessCS/Pendulearn.git
