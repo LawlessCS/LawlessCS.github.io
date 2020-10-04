@@ -13,9 +13,9 @@
 [submodule "TeachableMachines"]
 	path = TeachableMachines
 	url = https://github.com/LawlessCS/TeachableMachines.git
-[submodule "Pendulearn"]
-	path = plearn
-	url = https://github.com/lawlesscs/Pendulearn.git
 [submodule "Raycasting"]
 	path = Raycasting
 	url = https://github.com/lawlesscs/Raycasting
+[submodule "Pendulearn"]
+	path = Pendulearn
+	url = https://github.com/lawlesscs/Pendulearn
