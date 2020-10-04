@@ -14,7 +14,7 @@
 	path = TeachableMachines
 	url = https://github.com/LawlessCS/TeachableMachines.git
 [submodule "Pendulearn"]
-	path = Pendulearn
+	path = plearn
 	url = https://github.com/lawlesscs/Pendulearn.git
 [submodule "Raycasting"]
 	path = Raycasting
