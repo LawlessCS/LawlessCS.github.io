@@ -16,3 +16,6 @@
 [submodule "pendulearn"]
 	path = pendulearn
 	url = https://github.com/lawlesscs/pendulearn.git
+[submodule "Raycasting"]
+	path = Raycasting
+	url = https://github.com/lawlesscs/Raycasting
