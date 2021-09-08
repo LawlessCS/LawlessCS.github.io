@@ -1,3 +1,24 @@
 [submodule "PhasmoGhostTracker"]
 	path = PhasmoGhostTracker
 	url = https://www.github.com/lawlesscs/phasmoghosttracker
+[submodule "Coding-Challenges"]
+	path = Coding-Challenges
+	url = https://www.github.com/lawlesscs/Coding-Challenges
+[submodule "Doodle-Classifier"]
+	path = Doodle-Classifier
+	url = https://www.github.com/lawlesscs/Doodle-Classifier
+[submodule "Neuro-Flap"]
+	path = Neuro-Flap
+	url = https://www.github.com/lawlesscs/Neuro-Flap
+[submodule "Pendulearn"]
+	path = Pendulearn
+	url = https://www.github.com/lawlesscs/Pendulearn
+[submodule "Raycasting"]
+	path = Raycasting
+	url = https://www.github.com/lawlesscs/Raycasting
+[submodule "SnakeTF"]
+	path = SnakeTF
+	url = https://www.github.com/lawlesscs/SnakeTF
+[submodule "TeachableMachines"]
+	path = TeachableMachines
+	url = https://www.github.com/lawlesscs/TeachableMachines
