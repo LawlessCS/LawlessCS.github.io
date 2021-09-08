@@ -1,6 +1,6 @@
 [submodule "PhasmoGhostTracker"]
 	path = PhasmoGhostTracker
-	url = https://www.github.com/lawlesscs/phasmoghosttracker
+	url = https://www.github.com/lawlesscs/PhasmoGhostTracker
 [submodule "Coding-Challenges"]
 	path = Coding-Challenges
 	url = https://www.github.com/lawlesscs/Coding-Challenges
