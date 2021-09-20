@@ -1,37 +1,54 @@
-const ROWS = 100;
-const COLS = 150;
-const TILE_SIZE = 8;
+const TILE_SIZE = 6;
+
+let rows = 100;
+let cols = 150;
 
 let grid;
 let next;
 
+let canvas;
+let ctx;
+
+window.onload = setup;
+
 function setup() {
+  rows = Math.floor(window.innerHeight * 0.95 / TILE_SIZE);
+  cols = Math.floor(window.innerWidth * 0.95 / TILE_SIZE);
+
   // Create canvas with dynamic size
-  createCanvas(COLS * TILE_SIZE + 1, ROWS * TILE_SIZE + 1);
+  canvas = document.createElement("canvas");
+  canvas.id = "GOL_Canvas";
+  canvas.width = cols * TILE_SIZE + 1;
+  canvas.height = rows * TILE_SIZE + 1;
+
+  document.body.appendChild(canvas);
+
+  ctx = canvas.getContext("2d");
+  ctx.fillStyle = "black";
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
 
   // Create arrays for grid and next state
-  grid = make2DArray(ROWS, COLS);
-  next = make2DArray(ROWS, COLS);
+  grid = make2DArray(rows, cols);
+  next = make2DArray(rows, cols);
   
   // Fill grid with random values (0 or 1)
-  grid = grid.map(x=>x.map(y=>Math.floor(Math.random()*2)));
+  grid = grid.map(x=>x.map(y=>Math.floor(Math.random()>0.5)));
 
-  // Set up brush
-  fill(255);
-  strokeWeight(0);
-  stroke(0);
+  draw();
 }
 
 function draw() {
   // Clear canvas
-  background(0);  
+  ctx.fillStyle = "black";
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+  ctx.fillStyle = "white";
 
   // Reset next state array to zeros
-  next = next.map(x=>x.map(_=>0));
+  next = next.map(x=>x.map(y=>0));
 
   // Loop through every tile
-  for (let i = 0; i < ROWS; i++) {
-    for (let j = 0; j < COLS; j++) {
+  for (let i = 0; i < rows; i++) {
+    for (let j = 0; j < cols; j++) {
       // Set state to contents of array at position i, j
       let state = grid[i][j];
       
@@ -41,7 +58,7 @@ function draw() {
         let y = i * TILE_SIZE;
 
         // Draw square to show tile as live
-        rect(x + 1, y + 1, TILE_SIZE - 1, TILE_SIZE - 1);
+        ctx.fillRect(x + 1, y + 1, TILE_SIZE - 1, TILE_SIZE -1);
       }      
 
       // Count number of neighbours of tile at i, j
@@ -62,6 +79,8 @@ function draw() {
 
   // Set grid to calculated next state
   grid = next;
+
+  requestAnimationFrame(draw);
 }
 
 // Create 'rows' number of 'cols' length arrays
@@ -77,8 +96,8 @@ function countNeighbours(grid, y, x) {
 
   for (let i = -1; i < 2; i++) {
     for (let j = -1; j < 2; j++) {
-      let newI = (i + y + ROWS) % ROWS;
-      let newJ = (j + x + COLS) % COLS;
+      let newI = (i + y + rows) % rows;
+      let newJ = (j + x + cols) % cols;
 
       count += grid[newI][newJ];
     }
